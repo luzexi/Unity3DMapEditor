@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{FE88E306-1BBA-9D82-1193-BF18380DAF1D}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\Editor\MapEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\MapSerializerTool.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Editors\SpriteTimelineEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Editors\UICtlEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Editors\UIPanelEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIActionBtnInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIBistateInteractivePanelInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIBtnChangePanelInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIBtnLoadSceneInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIBtnWWWInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIButton3DInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIButtonInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UICtlInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIInteractivePanelInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIListButtonInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIListItemInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIPanelBaseInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIPanelInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIPanelTabInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIProgressBarInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIRadioBtn3DInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIRadioBtnInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UISliderInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIStateToggleBtn3DInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UIStateToggleBtnInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Inspectors\UITextFieldInspector.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Wizards\About_EZ_GUI.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Wizards\About_SM2.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Wizards\BuildAtlases.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Wizards\CopyControl.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Wizards\CopyTransitions.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Wizards\SetRenderCamera.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\AnBSoft\Wizards\SpriteSizer.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\ActorSkillEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\ActorViewer.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\CreateActorAssetbundles.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\CreateActorSkillEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\CreateMiniMap.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\EventEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\GrowPointEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\INI.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\NPCEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Artist Tools\PatrolEditor.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Config\ConfigTools.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\EditUnWalkable\EditorUnWalkable.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\BuildBatch.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\EditorHelpers.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\EditorSerializer.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\ExportScene.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\JsonHandler.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\LogFile.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\SceneSerializer.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\ExportScene\VersionInfoWizard.cs" />
+     <Compile Include="Assets\Scripts\old\Editor\Skill\SkillTool.cs" />
+     <None Include="Assets\Scripts\old\Plugins\AnBSoft Common\Standard Font\Arial, Fancy.txt" />
+     <None Include="Assets\Scripts\old\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored, Fast.shader" />
+     <None Include="Assets\Scripts\old\Plugins\AnBSoft Common\Standard Shaders\Sprite Simple Texture .shader" />
+     <None Include="Assets\Scripts\old\Shader\Character.shader" />
+     <None Include="Assets\Scripts\old\Plugins\AnBSoft Common\Standard Shaders\Unlit Transparent Color.shader" />
+     <None Include="Assets\Scripts\old\Shader\Projector AlphaBlend.shader" />
+     <None Include="Assets\Scripts\old\Shader\qilang.shader" />
+     <None Include="Assets\Scripts\old\Plugins\AnBSoft Common\Standard Shaders\UnlitOccluderEffect.shader" />
+     <None Include="Assets\Scripts\old\Plugins\AnBSoft Common\Standard Shaders\Transparent Vertex Colored.shader" />
+     <None Include="Assets\Scripts\old\Shader\VertexColorDiffuse.shader" />
+     <None Include="Assets\Scripts\old\Plugins\AnBSoft Common\Standard Shaders\Sprite Cutout.shader" />
+     <None Include="Assets\Scripts\old\Shader\Projector Add.shader" />
+ <Reference Include="LitJson">
+ <HintPath>/Users/luzexi/Desktop/Work/Project/Unity3DMapEditor/Unity3DMapEditor/Assets/Scripts/Map/LitJson.dll</HintPath>
+ </Reference>
+ <Reference Include="DBCManager">
+ <HintPath>/Users/luzexi/Desktop/Work/Project/Unity3DMapEditor/Unity3DMapEditor/Assets/Scripts/old/Plugin/DBCManager.dll</HintPath>
+ </Reference>
+ <Reference Include="Encrypt">
+ <HintPath>/Users/luzexi/Desktop/Work/Project/Unity3DMapEditor/Unity3DMapEditor/Assets/Scripts/old/Plugin/Encrypt.dll</HintPath>
+ </Reference>
+ <Reference Include="NavMesh">
+ <HintPath>/Users/luzexi/Desktop/Work/Project/Unity3DMapEditor/Unity3DMapEditor/Assets/Scripts/old/Plugin/NavMesh.dll</HintPath>
+ </Reference>
+ <Reference Include="NetWork">
+ <HintPath>/Users/luzexi/Desktop/Work/Project/Unity3DMapEditor/Unity3DMapEditor/Assets/Scripts/old/Plugin/NetWork.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-vs.csproj">
+      <Project>{6D293119-8116-505C-5172-14E4EC43FC06}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

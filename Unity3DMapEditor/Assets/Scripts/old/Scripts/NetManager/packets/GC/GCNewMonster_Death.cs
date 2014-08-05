@@ -1,0 +1,97 @@
+﻿
+using System;
+
+using Network;
+using Network.Handlers;
+
+namespace Network.Packets
+{
+
+
+    public class GCNewMonster_Death : PacketBase
+    {
+
+        //公用继承接口
+        public override bool readFromBuff(ref NetInputBuffer buff)
+        {
+            if (buff.ReadInt(ref m_ObjID) != sizeof(int)) return false;
+
+
+            if (!m_posWorld.readFromBuff(ref buff)) return false;
+
+
+            if (buff.ReadFloat(ref m_fDir) != sizeof(float)) return false;
+
+            if (buff.ReadFloat(ref m_fMoveSpeed) != sizeof(float)) return false;
+
+            if (buff.ReadByte(ref m_IsNPC) != sizeof(byte)) return false;
+
+            return true;
+        }
+        public override int writeToBuff(ref NetOutputBuffer buff)
+        {
+            return NET_DEFINE.PACKET_HEADER_SIZE + getSize();
+        }
+
+        public override short getPacketID()
+        {
+            return (short)PACKET_DEFINE.PACKET_GC_NEWMONSTER_DEATH;
+        }
+        public override int getSize()
+        {
+            return m_posWorld.getSize() +
+                sizeof(int) +
+                sizeof(float) * 2 +
+                sizeof(byte);
+        }
+
+        //public interface
+        public WORLD_POS Position
+        {
+            get { return this.m_posWorld; }
+            set { m_posWorld = value; }
+        }
+        public int ObjectID
+        {
+            get { return this.m_ObjID; }
+            set { m_ObjID = value; }
+        }
+        public float Dir
+        {
+            get { return this.m_fDir; }
+            set { m_fDir = value; }
+        }
+        public float MoveSpeed
+        {
+            get { return this.m_fMoveSpeed; }
+            set { m_fMoveSpeed = value; }
+        }
+        public byte IsNpc
+        {
+            get { return this.m_IsNPC; }
+            set { m_IsNPC = value; }
+        }
+
+        //数据
+
+        private int m_ObjID;		// ObjID
+        WORLD_POS m_posWorld;		// 位置
+        private float m_fDir;			// 方向
+        private float m_fMoveSpeed;	// 移动速度
+        private byte m_IsNPC;
+ 
+
+    };
+    public class GCNewMonster_DeathFactory : PacketFactory
+    {
+        public override PacketBase CreatePacket() { return new GCNewMonster_Death(); }
+        public override int GetPacketID() { return (short)PACKET_DEFINE.PACKET_GC_NEWMONSTER_DEATH; }
+        public override int GetPacketMaxSize()
+        {
+            return WORLD_POS.GetMaxSize() +
+               sizeof(int) +
+               sizeof(float) * 2 +
+               sizeof(byte);
+        }
+    };
+}
