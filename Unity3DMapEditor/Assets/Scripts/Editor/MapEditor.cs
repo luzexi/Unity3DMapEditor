@@ -18,7 +18,7 @@ public class MapEditor : Editor
 {
 	private const string EXPORT_TAG = "Map";
 	private const string PrefabsPath = "Assets/Temps/";
-	private const int EXPORT_OBJECT_NUM = 5;
+	private const int EXPORT_OBJECT_NUM = 1;
 	private const string EXPORT_PATH = "Assets/Build/Maps/";
 
 	[MenuItem("Map/Export")]
@@ -38,7 +38,7 @@ public class MapEditor : Editor
 		if(!Directory.Exists(buildDIR))
 			Directory.CreateDirectory(buildDIR);
 
-		List<MapAssets> lstAsset = MapSerializerTool.JsonToAssetList(buildDIR + "asset.json");
+		List<MapAssets> lstAsset = MapSerializerTool.JsonToAssetList(EXPORT_PATH + "asset.json");
 		AssetDatabase.Refresh(ImportAssetOptions.ImportRecursive);
 		Debug.Log("**************init end*****************");
 		
@@ -119,13 +119,14 @@ public class MapEditor : Editor
 		string mapInfoPath = buildDIR + "map.p";
 		string mapInfoTxtPath = PrefabsPath + "map.txt";
 		MapSerializerTool.SerializeObjectAndSave(map , mapInfoTxtPath);
+		AssetDatabase.Refresh();
 		UnityEngine.Object mapInfoObj = AssetDatabase.LoadAssetAtPath(mapInfoTxtPath , typeof(TextAsset));
 		BuildPipeline.BuildAssetBundle(mapInfoObj , null , Application.dataPath + "/../" + mapInfoPath);
 		Debug.Log("**************Map infomation Build end*****************");
 
 		Debug.Log("**************Ending begin*****************");
-		AssetDatabase.DeleteAsset(PrefabsPath);
-		MapSerializerTool.SerializeObjectAndSave(lstAsset , buildDIR + "asset.json");
+		Directory.Delete(PrefabsPath,true);
+		MapSerializerTool.SerializeObjectAndSave(lstAsset , EXPORT_PATH + "asset.json");
 		AssetDatabase.Refresh();
 		Debug.Log("**************Ending end*****************");
 

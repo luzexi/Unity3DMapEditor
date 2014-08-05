@@ -26,5 +26,17 @@ public class MapNode
 		rotation = new double[4];
 		scale = new double[3];
 	}
+
+	public MapNodeEx ToMapNodeEx()
+	{
+		MapNodeEx node = new MapNodeEx();
+		node.name = this.name;
+		node.assetBundle = this.assetPath;
+		node.textureBundle = this.texture;
+		node.position = new Vector3((float)this.position[0],(float)this.position[1],(float)this.position[2]);
+		node.rotation = new Quaternion((float)this.rotation[0],(float)this.rotation[1],(float)this.rotation[2],(float)this.rotation[3]);
+		node.scale = new Vector3((float)this.scale[0],(float)this.scale[1],(float)this.scale[2]);
+		return node;
+	}
 }
 

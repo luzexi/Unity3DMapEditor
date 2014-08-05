@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Map\MapMonoEditor.cs" />
      <Compile Include="Assets\Scripts\Map\MapNode.cs" />
      <Compile Include="Assets\Scripts\Map\MapNodeEx.cs" />
+     <Compile Include="Assets\Scripts\MapTest\MapTest.cs" />
      <Compile Include="Assets\Scripts\old\EditorScripts\Artist Tool\ActorSkill.cs" />
      <Compile Include="Assets\Scripts\old\EditorScripts\Artist Tool\EventEditorScript.cs" />
      <Compile Include="Assets\Scripts\old\EditorScripts\Artist Tool\FrameUpdateScript.cs" />
@@ -749,6 +750,9 @@
  </Reference>
  <Reference Include="NetWork">
  <HintPath>/Users/luzexi/Desktop/Work/Project/Unity3DMapEditor/Unity3DMapEditor/Assets/Scripts/old/Plugin/NetWork.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity3DGameResource">
+ <HintPath>/Users/luzexi/Desktop/Work/Project/Unity3DMapEditor/Unity3DMapEditor/Assets/Scripts/MapTest/Unity3DGameResource.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
